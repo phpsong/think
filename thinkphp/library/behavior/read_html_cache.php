@@ -60,7 +60,7 @@ class ReadHtmlCache {
                 $html   =   $htmls['*']; // 全局静态规则
             }elseif(isset($htmls['empty:index']) && !class_exists(MODULE_NAME.'Action')){
                 $html   =    $htmls['empty:index']; // 空模块静态规则
-            }elseif(isset($htmls[$moduleName.':_empty']) && $this->isEmptyAction(MODULE_NAME,ACTION_NAME)){
+            }elseif(isset($htmls[$moduleName.':_empty']) && self::isEmptyAction(MODULE_NAME,ACTION_NAME)){
                 $html   =    $htmls[$moduleName.':_empty']; // 空操作静态规则
             }
             if(!empty($html)) {
